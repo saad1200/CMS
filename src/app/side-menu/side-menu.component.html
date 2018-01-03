@@ -1,0 +1,26 @@
+<div class="sidebar-header d-flex align-items-center">
+    <div class="avatar"><img src="assets/img/bashar.jpg" alt="..." class="img-fluid rounded-circle"></div>
+    <div class="title">
+    <h1 class="h4">Bashar Alheyyari</h1>
+    <p>Manager</p>
+    </div>
+</div>
+<ul class="list-unstyled">
+    <li [class.active]="clicked === 1"><a routerLink="customers" (click)="clicked=1">العملاء</a></li>
+    <li [class.active]="clicked === 2"><a routerLink="suppliers" (click)="clicked=2">الموردين</a></li>
+    <li [class.active]="clicked === 3"><a routerLink="receipt-vouchers" (click)="clicked=3">سند قبض</a></li>
+    <li [class.active]="clicked === 4"><a routerLink="payment-vouchers" (click)="clicked=4">سند صرف</a></li>
+    <li [class.active]="clicked === 5"><a routerLink="receipts" (click)="clicked=5">سند صرف</a></li>
+    <li [class.active]="clicked === 6">
+        <a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse" (click)="clicked=6"> <i class="icon-interface-windows"></i>تقارير</a>
+        <!-- <a href="#"><i class="fa fa-fw"></i><span class="nav-first-level"> تقارير</span><span class="fa arrow"></span></a> -->
+        <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
+            <li><a routerLink="customers-report">تقرير بيانات العملاء</a></li>
+            <li><a routerLink="suppliers-report">تقرير بيانات الموردين</a></li>
+            <li><a routerLink="account-statements">كشف حساب</a></li>
+            <li><a routerLink="invoice-vouchers-reports">تقرير الفاتورة</a></li>
+            <li><a routerLink="receipt-vouchers-reports">تقرير سندات القبض</a></li>
+            <li><a routerLink="payment-vouchers-reports">تقرير سندات الصرف</a></li>
+        </ul> 
+    </li>
+</ul>
